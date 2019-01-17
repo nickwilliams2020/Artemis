@@ -1,0 +1,489 @@
+{
+  "aliases": {
+    "green": {
+      "value": "131, 50%"
+    },
+    "cyan": {
+      "value": "197, 97%"
+    },
+    "inverse": {
+      "value": "214, 17%"
+    },
+    "red": {
+      "value": "7, 93%"
+    },
+    "yellow": {
+      "value": "51, 97%"
+    },
+    "lime": {
+      "value": "147, 86%"
+    },
+    "light": {
+      "value": "218, 35%"
+    },
+    "blue": {
+      "value": "201, 96%"
+    },
+    "purple": {
+      "value": "276, 61%"
+    },
+    "first": {
+      "value": "cyan"
+    },
+    "second": {
+      "value": "lime"
+    },
+    "third": {
+      "value": "purple"
+    },
+    "fourth": {
+      "value": "blue"
+    },
+    "fifth": {
+      "value": "inverse"
+    }
+  },
+  "props": {
+    "c-info-light": {
+      "type": "color",
+      "category": "special-color",
+      "value": "rgb(3, 156, 216)",
+      "originalValue": "hsla({!cyan}, 43%, 1)",
+      "name": "c-info-light"
+    },
+    "c-success-light": {
+      "type": "color",
+      "category": "special-color",
+      "value": "rgb(55, 164, 75)",
+      "originalValue": "hsla({!green}, 43%, 1)",
+      "name": "c-success-light"
+    },
+    "c-green-light": {
+      "type": "color",
+      "category": "base-color",
+      "value": "rgb(55, 164, 75)",
+      "originalValue": "hsla({!green}, 43%, 1)",
+      "name": "c-green-light"
+    },
+    "c-lime-dark": {
+      "type": "color",
+      "category": "base-color",
+      "value": "rgb(80, 242, 153)",
+      "originalValue": "hsla({!lime}, 63%, 1)",
+      "name": "c-lime-dark"
+    },
+    "c-blue": {
+      "type": "color",
+      "category": "base-color",
+      "value": "rgb(20, 170, 250)",
+      "originalValue": "hsla({!blue}, 53%, 1)",
+      "name": "c-blue"
+    },
+    "c-yellow-dark": {
+      "type": "color",
+      "category": "base-color",
+      "value": "rgb(252, 225, 69)",
+      "originalValue": "hsla({!yellow}, 63%, 1)",
+      "name": "c-yellow-dark"
+    },
+    "c-purple": {
+      "type": "color",
+      "category": "base-color",
+      "value": "rgb(181, 120, 222)",
+      "originalValue": "hsla({!purple}, 67%, 1)",
+      "name": "c-purple"
+    },
+    "c-inverse": {
+      "type": "color",
+      "category": "base-color",
+      "value": "rgb(51, 60, 72)",
+      "originalValue": "hsla({!inverse}, 24%, 1)",
+      "name": "c-inverse"
+    },
+    "c-red": {
+      "type": "color",
+      "category": "base-color",
+      "value": "rgb(248, 89, 68)",
+      "originalValue": "hsla({!red}, 62%, 1)",
+      "name": "c-red"
+    },
+    "c-yellow-light": {
+      "type": "color",
+      "category": "base-color",
+      "value": "rgb(216, 184, 3)",
+      "originalValue": "hsla({!yellow}, 43%, 1)",
+      "name": "c-yellow-light"
+    },
+    "c-lime-light": {
+      "type": "color",
+      "category": "base-color",
+      "value": "rgb(12, 166, 82)",
+      "originalValue": "hsla({!lime}, 35%, 1)",
+      "name": "c-lime-light"
+    },
+    "c-success-dark": {
+      "type": "color",
+      "category": "special-color",
+      "value": "rgb(113, 208, 131)",
+      "originalValue": "hsla({!green}, 63%, 1)",
+      "name": "c-success-dark"
+    },
+    "c-green-dark": {
+      "type": "color",
+      "category": "base-color",
+      "value": "rgb(113, 208, 131)",
+      "originalValue": "hsla({!green}, 63%, 1)",
+      "name": "c-green-dark"
+    },
+    "c-info-dark": {
+      "type": "color",
+      "category": "special-color",
+      "value": "rgb(69, 200, 252)",
+      "originalValue": "hsla({!cyan}, 63%, 1)",
+      "name": "c-info-dark"
+    },
+    "c-light": {
+      "type": "color",
+      "category": "base-color",
+      "value": "rgb(234, 238, 245)",
+      "originalValue": "hsla({!light}, 94%, 1)",
+      "name": "c-light"
+    },
+    "c-blue-light": {
+      "type": "color",
+      "category": "base-color",
+      "value": "rgb(4, 141, 215)",
+      "originalValue": "hsla({!blue}, 43%, 1)",
+      "name": "c-blue-light"
+    },
+    "c-cyan": {
+      "type": "color",
+      "category": "base-color",
+      "value": "rgb(34, 190, 252)",
+      "originalValue": "hsla({!cyan}, 56%, 1)",
+      "name": "c-cyan"
+    },
+    "c-danger": {
+      "type": "color",
+      "category": "special-color",
+      "value": "rgb(247, 50, 24)",
+      "originalValue": "hsla({!red}, 53%, 1)",
+      "name": "c-danger"
+    },
+    "c-inverse-light": {
+      "type": "color",
+      "category": "base-color",
+      "value": "rgb(28, 32, 39)",
+      "originalValue": "hsla({!inverse}, 13%, 1)",
+      "name": "c-inverse-light"
+    },
+    "c-purple-light": {
+      "type": "color",
+      "category": "base-color",
+      "value": "rgb(123, 43, 177)",
+      "originalValue": "hsla({!purple}, 43%, 1)",
+      "name": "c-purple-light"
+    },
+    "c-red-light": {
+      "type": "color",
+      "category": "base-color",
+      "value": "rgb(197, 29, 7)",
+      "originalValue": "hsla({!red}, 40%, 1)",
+      "name": "c-red-light"
+    },
+    "c-warning-dark": {
+      "type": "color",
+      "category": "special-color",
+      "value": "rgb(252, 225, 69)",
+      "originalValue": "hsla({!yellow}, 63%, 1)",
+      "name": "c-warning-dark"
+    },
+    "c-warning": {
+      "type": "color",
+      "category": "special-color",
+      "value": "rgb(251, 217, 19)",
+      "originalValue": "hsla({!yellow}, 53%, 1)",
+      "name": "c-warning"
+    },
+    "grey1": {
+      "type": "color",
+      "category": "greyscale-color",
+      "value": "rgb(250, 250, 250)",
+      "originalValue": "hsla(0, 0, 98%, 1)",
+      "name": "grey1"
+    },
+    "grey2": {
+      "type": "color",
+      "category": "greyscale-color",
+      "value": "rgb(242, 242, 242)",
+      "originalValue": "hsla(0, 0, 95%, 1)",
+      "name": "grey2"
+    },
+    "grey3": {
+      "type": "color",
+      "category": "greyscale-color",
+      "value": "rgb(230, 230, 230)",
+      "originalValue": "hsla(0, 0, 90%, 1)",
+      "name": "grey3"
+    },
+    "grey4": {
+      "type": "color",
+      "category": "greyscale-color",
+      "value": "rgb(217, 217, 217)",
+      "originalValue": "hsla(0, 0, 85%, 1)",
+      "name": "grey4"
+    },
+    "c-light-light": {
+      "type": "color",
+      "category": "base-color",
+      "value": "rgb(196, 208, 227)",
+      "originalValue": "hsla({!light}, 83%, 1)",
+      "name": "c-light-light"
+    },
+    "grey5": {
+      "type": "color",
+      "category": "greyscale-color",
+      "value": "rgb(191, 191, 191)",
+      "originalValue": "hsla(0, 0, 75%, 1)",
+      "name": "grey5"
+    },
+    "c-cyan-light": {
+      "type": "color",
+      "category": "base-color",
+      "value": "rgb(3, 127, 176)",
+      "originalValue": "hsla({!cyan}, 35%, 1)",
+      "name": "c-cyan-light"
+    },
+    "c-danger-light": {
+      "type": "color",
+      "category": "special-color",
+      "value": "rgb(212, 31, 8)",
+      "originalValue": "hsla({!red}, 43%, 1)",
+      "name": "c-danger-light"
+    },
+    "c-danger-dark": {
+      "type": "color",
+      "category": "special-color",
+      "value": "rgb(248, 93, 73)",
+      "originalValue": "hsla({!red}, 63%, 1)",
+      "name": "c-danger-dark"
+    },
+    "c-cyan-dark": {
+      "type": "color",
+      "category": "base-color",
+      "value": "rgb(119, 215, 253)",
+      "originalValue": "hsla({!cyan}, 73%, 1)",
+      "name": "c-cyan-dark"
+    },
+    "grey6": {
+      "type": "color",
+      "category": "greyscale-color",
+      "value": "rgb(153, 153, 153)",
+      "originalValue": "hsla(0, 0, 60%, 1)",
+      "name": "grey6"
+    },
+    "c-light-dark": {
+      "type": "color",
+      "category": "base-color",
+      "value": "rgb(255, 255, 255)",
+      "originalValue": "hsla({!light}, 100%, 1)",
+      "name": "c-light-dark"
+    },
+    "grey7": {
+      "type": "color",
+      "category": "greyscale-color",
+      "value": "rgb(128, 128, 128)",
+      "originalValue": "hsla(0, 0, 50%, 1)",
+      "name": "grey7"
+    },
+    "c-info": {
+      "type": "color",
+      "category": "special-color",
+      "value": "rgb(19, 186, 251)",
+      "originalValue": "hsla({!cyan}, 53%, 1)",
+      "name": "c-info"
+    },
+    "c-success": {
+      "type": "color",
+      "category": "special-color",
+      "value": "rgb(75, 195, 97)",
+      "originalValue": "hsla({!green}, 53%, 1)",
+      "name": "c-success"
+    },
+    "c-green": {
+      "type": "color",
+      "category": "base-color",
+      "value": "rgb(75, 195, 97)",
+      "originalValue": "hsla({!green}, 53%, 1)",
+      "name": "c-green"
+    },
+    "grey8": {
+      "type": "color",
+      "category": "greyscale-color",
+      "value": "rgb(77, 77, 77)",
+      "originalValue": "hsla(0, 0, 30%, 1)",
+      "name": "grey8"
+    },
+    "grey9": {
+      "type": "color",
+      "category": "greyscale-color",
+      "value": "rgb(26, 26, 26)",
+      "originalValue": "hsla(0, 0, 10%, 1)",
+      "name": "grey9"
+    },
+    "c-warning-light": {
+      "type": "color",
+      "category": "special-color",
+      "value": "rgb(216, 184, 3)",
+      "originalValue": "hsla({!yellow}, 43%, 1)",
+      "name": "c-warning-light"
+    },
+    "c-red-dark": {
+      "type": "color",
+      "category": "base-color",
+      "value": "rgb(249, 102, 83)",
+      "originalValue": "hsla({!red}, 65%, 1)",
+      "name": "c-red-dark"
+    },
+    "c-purple-dark": {
+      "type": "color",
+      "category": "base-color",
+      "value": "rgb(195, 144, 228)",
+      "originalValue": "hsla({!purple}, 73%, 1)",
+      "name": "c-purple-dark"
+    },
+    "c-inverse-dark": {
+      "type": "color",
+      "category": "base-color",
+      "value": "rgb(70, 82, 98)",
+      "originalValue": "hsla({!inverse}, 33%, 1)",
+      "name": "c-inverse-dark"
+    },
+    "c-yellow": {
+      "type": "color",
+      "category": "base-color",
+      "value": "rgb(252, 224, 64)",
+      "originalValue": "hsla({!yellow}, 62%, 1)",
+      "name": "c-yellow"
+    },
+    "c-blue-dark": {
+      "type": "color",
+      "category": "base-color",
+      "value": "rgb(70, 188, 251)",
+      "originalValue": "hsla({!blue}, 63%, 1)",
+      "name": "c-blue-dark"
+    },
+    "c-lime": {
+      "type": "color",
+      "category": "base-color",
+      "value": "rgb(16, 213, 105)",
+      "originalValue": "hsla({!lime}, 45%, 1)",
+      "name": "c-lime"
+    },
+    "c-fourth": {
+      "type": "theme-colors",
+      "category": "color",
+      "value": "@c-blue",
+      "originalValue": "@c-{!fourth}",
+      "name": "c-fourth"
+    },
+    "c-second-dark": {
+      "type": "theme-colors",
+      "category": "color",
+      "value": "@c-lime-dark",
+      "originalValue": "@c-{!second}-dark",
+      "name": "c-second-dark"
+    },
+    "c-first": {
+      "type": "theme-colors",
+      "category": "color",
+      "value": "@c-cyan",
+      "originalValue": "@c-{!first}",
+      "name": "c-first"
+    },
+    "c-third-light": {
+      "type": "theme-colors",
+      "category": "color",
+      "value": "@c-purple-light",
+      "originalValue": "@c-{!third}-light",
+      "name": "c-third-light"
+    },
+    "c-third-dark": {
+      "type": "theme-colors",
+      "category": "color",
+      "value": "@c-purple-dark",
+      "originalValue": "@c-{!third}-dark",
+      "name": "c-third-dark"
+    },
+    "c-second-light": {
+      "type": "theme-colors",
+      "category": "color",
+      "value": "@c-lime-light",
+      "originalValue": "@c-{!second}-light",
+      "name": "c-second-light"
+    },
+    "c-fourth-light": {
+      "type": "theme-colors",
+      "category": "color",
+      "value": "@c-blue-light",
+      "originalValue": "@c-{!fourth}-light",
+      "name": "c-fourth-light"
+    },
+    "c-fifth": {
+      "type": "theme-colors",
+      "category": "color",
+      "value": "@c-inverse",
+      "originalValue": "@c-{!fifth}",
+      "name": "c-fifth"
+    },
+    "c-first-light": {
+      "type": "theme-colors",
+      "category": "color",
+      "value": "@c-cyan-light",
+      "originalValue": "@c-{!first}-light",
+      "name": "c-first-light"
+    },
+    "c-fifth-dark": {
+      "type": "theme-colors",
+      "category": "color",
+      "value": "@c-inverse-dark",
+      "originalValue": "@c-{!fifth}-dark",
+      "name": "c-fifth-dark"
+    },
+    "c-fifth-light": {
+      "type": "theme-colors",
+      "category": "color",
+      "value": "@c-inverse-light",
+      "originalValue": "@c-{!fifth}-light",
+      "name": "c-fifth-light"
+    },
+    "c-first-dark": {
+      "type": "theme-colors",
+      "category": "color",
+      "value": "@c-cyan-dark",
+      "originalValue": "@c-{!first}-dark",
+      "name": "c-first-dark"
+    },
+    "c-third": {
+      "type": "theme-colors",
+      "category": "color",
+      "value": "@c-purple",
+      "originalValue": "@c-{!third}",
+      "name": "c-third"
+    },
+    "c-second": {
+      "type": "theme-colors",
+      "category": "color",
+      "value": "@c-lime",
+      "originalValue": "@c-{!second}",
+      "name": "c-second"
+    },
+    "c-fourth-dark": {
+      "type": "theme-colors",
+      "category": "color",
+      "value": "@c-blue-dark",
+      "originalValue": "@c-{!fourth}-dark",
+      "name": "c-fourth-dark"
+    }
+  }
+}

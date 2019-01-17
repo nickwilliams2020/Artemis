@@ -1,0 +1,266 @@
+{
+  "Sample Patient": {
+    "biopsies": [
+      {
+        "assayResults": [
+          {
+            "biomarker": "ICCPTENs",
+            "biopsySequenceNumber": "bsn-99re",
+            "orderedDate": "2017-08-29 13:40:12.739000",
+            "patientSequenceNumber": "99re",
+            "reportedDate": "2017-08-29 13:40:12.824000",
+            "result": "NEGATIVE"
+          }
+        ],
+        "biopsySequenceNumber": "bsn-99re",
+        "biopsyType": "STANDARD",
+        "dateCreated": "2017-08-29 13:40:12.301000",
+        "mdAndersonMessages": [
+          {
+            "_class": "gov.match.model.message.NucleicAcidsShippingMessage",
+            "biopsySequenceNumber": "bsn-99re",
+            "destinationSite": "Boston",
+            "message": "NUCLEIC_ACID_SENDOUT",
+            "molecularSequenceNumber": "msn-99re",
+            "patientSequenceNumber": "99re",
+            "reportedDate": "2017-08-29 13:40:12.328000",
+            "trackingNumber": "123456789"
+          }
+        ],
+        "nextGenerationSequences": [
+          {
+            "analysisId": "JOB-99re",
+            "dateReceived": "2017-08-29 13:40:12.927000",
+            "dateVerified": "2017-08-29 13:42:12.309000",
+            "dnaBamFilePath": "s3://BDD/msn-99re/JOB-99re/sample1.bam",
+            "molecularSequenceNumber": "msn-99re",
+            "ngsRunNumber": "1",
+            "oncomineVariantAnnotationToolVersion": "2.0.2",
+            "rnaBamFilePath": "s3://BDD/msn-99re/JOB-99re/sample2.bam",
+            "status": "CONFIRMED",
+            "tvcVersion": "4.4-8",
+            "variantReport": {
+              "copyNumberVariants": [
+                {
+                  "alternative": "<CNV>",
+                  "chromosome": "chr1",
+                  "confidenceInterval5percent": 1.79208,
+                  "confidenceInterval95percent": 2.46082,
+                  "copyNumber": 8.1,
+                  "filter": "PASS",
+                  "gene": "AKT1",
+                  "identifier": "AKT1",
+                  "inclusion": true,
+                  "metadata": {
+                    "_id": "af3074a6-7b90-4b47-a15f-7f64fffbcfac",
+                    "comment": "unconfirm comment"
+                  },
+                  "position": "40361592",
+                  "rawCopyNumber": 2.1,
+                  "refCopyNumber": 2,
+                  "reference": "A"
+                }
+              ],
+              "createdDate": "2017-08-29 13:40:12.925000",
+              "indels": [
+                {
+                  "alleleFrequency": 0.446897,
+                  "alternative": "-",
+                  "alternativeAlleleObservationCount": 640,
+                  "chromosome": "chr1",
+                  "exon": "6",
+                  "filter": "PASS",
+                  "flowAlternativeAlleleObservationCount": "648",
+                  "flowReferenceAlleleObservations": "802",
+                  "gene": "MYCL",
+                  "identifier": "NAUGHT",
+                  "inclusion": true,
+                  "location": "exonic",
+                  "metadata": {
+                    "_id": "954dd7e3-5d62-45ad-bf28-4311154a9528",
+                    "comment": "unconfirm comment"
+                  },
+                  "oncominevariantclass": "Deletion",
+                  "position": "40363760",
+                  "readDepth": 1464,
+                  "reference": "GTTAGATATA",
+                  "referenceAlleleObservations": 801,
+                  "transcript": "NM_001033082.2"
+                }
+              ],
+              "metadata": {
+"_id": "24157635-e144-4324-a8cf-8dab9c2414b3",
+"comment": "confirming the variant report",
+"commenter": "vivek.ramani@nih.gov",
+"profile": "vivek.ramani@nih.gov",
+"status": "confirmed"
+},
+              "singleNucleotideVariants": [
+                {
+                  "alleleFrequency": 1,
+                  "alternative": "A",
+                  "chromosome": "chr7",
+                  "exon": "25",
+                  "filter": "PASS",
+                  "flowAlternativeAlleleObservationCount": "350",
+                  "flowReferenceAlleleObservations": "1998",
+                  "function": "nonframeshiftDeletion",
+                  "gene": "NF1",
+                  "identifier": "match1108.1",
+                  "inclusion": true,
+                  "location": "exonic",
+                  "metadata": {
+                    "_id": "7b543ece-250b-4497-8058-b2756e79ccf4"
+                  },
+                  "oncominevariantclass": "DELETERIOUS",
+                  "position": "55259515",
+                  "readDepth": 2124,
+                  "reference": "G",
+                  "referenceAlleleObservations": 2120,
+                  "transcript": "NM_004958.3"
+                }
+                ],
+              "unifiedGeneFusions": [
+                {
+                  "confirmed": true,
+                  "driverGene": "TPM3",
+                  "driverReadCount": 450,
+                  "identifier": "TPM3-ALK.T7A20",
+                  "metadata": {
+                    "_id": "46fee0a8-9f47-4d55-8f3f-19402ae0c142",
+                    "comment": "confirming the variant",
+                    "commenter": "vivek.ramani@nih.gov",
+                    "status": "confirmed"
+                  },
+                  "partnerGene": "ALK",
+                  "partnerReadCount": 450
+                }
+              ]
+            },
+            "vcfFilePath": "s3://BDD/msn-99re/JOB-99re/99re_N-14-000005_variants.vcf"
+          }
+        ],
+        "reBiopsy": "NO"
+      }
+    ],
+    "concordance": "Y",
+    "currentPatientStatus": "OFF_TRIAL_NO_TA_AVAILABLE",
+    "diseases": [
+      {
+        "_id": "10040811",
+        "ctepCategory": "Skin Neoplasm",
+        "ctepSubCategory": "Skin Neoplasm, Miscellaneous",
+        "ctepTerm": "Skin cancer, NOS",
+        "shortName": "Skin cancer, NOS"
+      }
+    ],
+    "ethnicity": "PATIENT_REFUSAL",
+    "gender": "MALE",
+    "patientAssignments": [
+      {
+        "assayMessages": [
+          {
+            "biomarker": "ICCPTENs",
+            "biopsySequenceNumber": "bsn-99re",
+            "orderedDate": "2017-08-29 13:40:12.739000",
+            "patientSequenceNumber": "99re",
+            "reportedDate": "2017-08-29 13:40:12.824000",
+            "result": "NEGATIVE"
+          }
+        ],
+        "assignmentType": "STANDARD",
+        "biopsySequenceNumber": "bsn-99re",
+        "dateAssigned": "2017-08-29 13:42:44.729000",
+        "dateConfirmed": "2017-08-29 13:43:17.401000",
+        "dateReceivedByECOG": "2017-08-29 13:43:17.460000",
+        "dateSentToECOG": "2017-08-29 13:43:17.401000",
+        "metadata": {
+"comment": "Who cares",
+"commenter": "vivek.ramani@nih.gov",
+"patientSequenceNumber": "1159",
+"profile": "vivek.ramani@nih.gov",
+"status": "CONFIRMED"
+},
+        "patientAssignmentLogic": [
+          {
+            "patientAssignmentReasonCategory": "NO_VARIANT_MATCH",
+            "reason": "The patient contains no matching variant.",
+            "treatmentArmId": "CukeTest-113",
+            "treatmentArmVersion": "2015-08-06"
+          }
+        ],
+        "patientAssignmentMessages": [
+          {
+            "ineligibleReason": {
+              "eligCritVersion": "1.0",
+              "eligInelig": "yes",
+              "eligQuestions": [
+                {
+                  "eligCrit": "Patients must fulfill all eligibility criteria outlined in Section 3.1 of MATCH Master Protocol(excluding Section 3.1 .6) at the time of registration to treatment step(Step 1, 3, 5, 7).",
+                  "eligCritKey": "2643",
+                  "eligYn": "Patient is NOT eligible based on this criterion"
+                }
+              ],
+              "formOid": "ELIG_CRIT",
+              "patientId": "99re",
+              "protTxArmAssTxt": "Trametinib in NF1 Mutations",
+              "ps": "1",
+              "ptVtStat": "Alive"
+            },
+            "message": "Treatment evaluation process completed.",
+            "patientSequenceNumber": "99re",
+            "status": "OFF_TRIAL_NO_TA_AVAILABLE",
+            "stepNumber": "0"
+          }
+        ],
+        "patientAssignmentStatus": "NO_ARM_ASSIGNED",
+        "patientAssignmentStatusMessage": "Treatment evaluation process completed.",
+        "stepNumber": "0",
+        "treatmentArm": {
+"maxPatientsAllowed": 35,
+"name": "CukeTest113",
+"stateToken": "b5187efc-5aec-49b7-a4fc-c7fe1711b96d",
+"studyTypes": [
+"STANDARD",
+"OUTSIDE_ASSAY"
+],
+"summaryReport": {
+"assignmentRecords": [{
+"analysisId": "j-1025-1",
+"assignmentReason": "The patient and treatment arm match on variant identifier [TPM3-ALK.T7A20].",
+"assignmentStatusOutcome": "FORMERLY_ON_ARM_PROGRESSED",
+"biopsySequenceNumber": "bsn-1025-1",
+"dateOffArm": "2017-09-09 12:44:53.289000",
+"dateOnArm": "2017-09-09 12:44:49.219000",
+"dateSelected": "2017-09-09 12:44:45.205000",
+"diseases": [
+{
+"_id": "10030139",
+"ctepCategory": "Gastrointestinal Neoplasm",
+"ctepSubCategory": "Gastroesophageal Cancer",
+"ctepTerm": "Adenocarcinoma of the esophagus",
+"shortName": "Adenocarcinoma - esophagus"
+}
+],
+"patientSequenceNumber": "1025",
+"patientType": "STANDARD",
+"slot": 1,
+"stepNumber": "1",
+"treatmentArmVersion": "2015-08-06"
+}],
+"numCurrentPatientsOnArm": 2,
+"numFormerPatients": 1,
+"numPendingArmApproval": 5
+},
+"version": "2015-08-06"
+}
+      }
+    ],
+    "patientSequenceNumber": "99re",
+    "patientType": "STANDARD",
+    "races": [
+      "WHITE"
+    ],
+    "registrationDate": "2017-08-29 13:40:12.241000"
+  }
+}

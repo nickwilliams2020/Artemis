@@ -1,0 +1,100 @@
+/*
+  classes that are used to construct the App
+*/
+
+@import (reference) 'app-variables.less';
+
+// greys
+.bg-grey1 { background-color: @grey1 }
+.bg-grey2 { background-color: @grey2 }
+.bg-grey3 { background-color: @grey3 }
+.bg-grey4 { background-color: @grey4 }
+.bg-grey5 { background-color: @grey5 }
+.bg-grey6 { background-color: @grey6 }
+.bg-grey7 { background-color: @grey7 }
+.bg-grey8 { background-color: @grey8 }
+.bg-grey9 { background-color: @grey9 }
+
+.default-focus {
+  outline: 5px auto @c-first;
+}
+
+.max-page-width {
+  max-width: @page-min-width;
+  margin: 0 auto;
+}
+
+// fonts
+.f-r { font-weight: 400; }
+.f-b { font-weight: 900; }
+.f-i { font-style: italic; }
+
+// box shadow generator
+.box-shadow(@shadow) {
+  -webkit-box-shadow: @shadow;
+  -moz-box-shadow: @shadow;
+  box-shadow: @shadow;
+}
+
+// generate graidents
+.horizontal-gradient(@color, @color-dark) {
+  background: @color; /* Old browsers */
+  background: -moz-linear-gradient(left,  @color 0%, @color-dark 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left,  @color 0%, @color-dark 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right,  @color 0%, @color-dark 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@color', endColorstr='@color-dark',GradientType=1 ); /* IE6-9 */}
+
+.vertical-gradient(@color, @color-dark) {
+  background: @color; /* Old browsers */
+  background: -moz-linear-gradient(top,  @color 0%, @color-dark 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  @color 0%,@color-dark 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  @color 0%, @color-dark 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@color', endColorstr='@color-dark',GradientType=0 ); /* IE6-9 */
+}
+
+.btn-vertical-gradient(@color, @color-dark) {
+  background: @color; /* Old browsers */
+  background: -moz-linear-gradient(top,  @color 0%, @color-dark 100%); /* FF3.6-15 */
+  // background: -webkit-linear-gradient(top,  @color 0%,@color-dark 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  @color 30%, @color-dark 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@color', endColorstr='@color-dark',GradientType=0 ); /* IE6-9 */
+}
+
+.stripe-gradient (@color: white, @darken: 2%) {
+  background: repeating-linear-gradient(
+    45deg,
+    @color,
+    @color 40px,
+    darken(@color, @darken) 40px,
+    darken(@color, @darken) 80px
+  );
+}
+
+.stripe-gradient-transparent (@color: black, @fadeout: 98%) {
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 40px,
+    fadeout(@color, @fadeout) 40px,
+    fadeout(@color, @fadeout) 80px
+  );
+}
+
+// functions
+.foreach(@body, @i) when (@i>0)
+{
+  .foreach(@body, @i - 1);
+
+  @value: @i;
+  @body();
+}
+
+// margins
+.icon-margin { margin-right: 6px; }
+
+// test borders
+.b { border: solid thin black };
+.p { border: solid thin purple };
+.g { border: solid thin green };
+.r { border: solid thin red };
+.o { border: solid thin orange };

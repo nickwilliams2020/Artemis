@@ -1,0 +1,332 @@
+/*
+  root classes and components
+*/
+
+@import (reference) 'app-helper.less';
+@import (reference) 'theme-generator.less';
+
+// ------------ colors --------------------
+// bg and text theme colors
+@global-scope: {
+  .generateThemeClasses({
+
+    // ------------- background -------------
+    .bg-@{name} { background-color: @color!important; }
+    .bg-@{name}-dark { background-color: @color-dark; }
+    .bg-@{name}-light { background-color: @color-light; }
+
+    // ------------- text -------------
+    .text-@{name} { color: @color!important; }
+    .text-@{name}-light { color: @color-light; }
+    .text-@{name}-dark { color: @color-dark; }
+
+    // ------------- panel -------------
+    .panel.bar-@{name}:before {
+      background-color: @color;
+    }
+
+  });
+};
+@global-scope();
+
+// -----------  root layout -----------
+:root {
+  font-size: @root-size;
+}
+
+#app {
+
+  // main bg-color
+  background-color: @page-bg-color;
+
+  display: grid;
+  grid-template-columns: @nav-width auto;
+  grid-template-rows: 50px 100%;
+
+  & > .nav-bar {
+    grid-row: span 2;
+    grid-column: 1;
+    //z-index: 1;
+  }
+
+  & > .header {
+    grid-row: 1;
+    grid-column: 2;
+    z-index: 1;
+  }
+
+  & > .content {
+    grid-row: 2;
+    grid-column: 2;
+    //z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    justify-items: stretch;
+  }
+
+  & > .portal {
+    z-index: 2;
+  }
+
+  // no nav bar
+  &.hide-nav {
+
+    // span header and content
+    & > .content {
+      grid-column: span 2;
+    }
+
+    // hide nav bar
+    & > .nav-bar, & > .header {
+      display: none;
+    }
+
+  }
+
+}
+
+// -----------  page styles -----------
+.page {
+  min-height: @page-min-height;
+
+  & >.page-body {
+    .max-page-width;
+    padding: @page-padding;
+
+    &.tabs {
+      padding-top: 0;
+    }
+  }
+
+}
+
+// -----------  form -----------
+.form-group {
+
+  // label
+  .form-label {
+    font-size: 1rem;
+    display: block;
+    margin-bottom: .5em;
+    font-weight: @bold;
+  }
+
+  // input
+  .form-control {
+    width: 100%;
+    transition: all @transition-speed ease-in-out;
+  }
+
+  // error text
+  .form-error-text {
+    color: @input-error-color;
+    font-size: 1rem;
+  }
+
+  // required
+  &.required > .form-label:after {
+    content: "*";
+    color: @c-danger;
+  }
+
+  // disabled
+  &.disabled {
+    opacity: .7;
+    pointer-events: none;
+  }
+
+}
+
+// -----------  style components -----------
+
+// ----- panel -----
+.panel {
+  position: relative;
+
+  background-color: white;
+  border-radius: @panel-border-radius;
+
+  display: flex;
+  flex-direction: column;
+
+  .box-shadow(@panel-shadow);
+
+  &.no-shadow {
+    box-shadow: none!important;
+  }
+
+
+  // ------ features ------
+  hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid @grey2;
+    margin: 0 0;
+    padding: 0;
+  }
+
+  // for panel inside tab
+  section {
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .panel-header {
+    flex: 0 0 auto;
+    padding: @panel-padding;
+  }
+
+  .panel-body {
+    flex: 0 1 100%;
+
+    &.darken {
+      border-top: solid thin fadeout(black, 95%);
+      background-color: fadeout(black, 98%);
+    }
+
+    // generic block
+    .panel-block {
+      padding: @panel-padding;
+    }
+
+    // block out section
+    .panel-section {
+      background-color: fadeout(black, 98%);
+      border-top: solid thin fadeout(black, 95%);
+      border-bottom: solid thin fadeout(black, 95%);
+
+      padding: @panel-padding;
+    }
+
+  }
+
+  .panel-footer {
+    flex: 0 0 auto;
+    padding: @panel-padding;
+
+    background-color: fadeout(black, 95%);
+    border-top: solid thin fadeout(black, 95%);
+  }
+
+  // ------ bar ------
+
+  // all
+  &.bar-left:before, &.bar-right:before, &.bar-top:before, &.bar-bottom:before {
+    content: " ";
+
+    display: block;
+    position: absolute;
+    overflow: hidden;
+  }
+
+  // left
+  &.bar-left:before {
+    width: 4px; max-width: 4px;
+    top: 2px; bottom: 2px; left: -4px;
+    border-radius: @panel-border-radius 0 0 @panel-border-radius;
+    background-color: @c-inverse;
+  }
+
+  // top
+  &.bar-top:before {
+    height: 4px; max-height: 4px;
+    top: -4px; left: 1px; right: 1px;
+    border-radius: @panel-border-radius @panel-border-radius 0 0;
+    background-color: @c-inverse;
+  }
+
+  // right
+  &.bar-right:before {
+    width: 4px; max-width: 4px;
+    top: 2px; bottom: 2px; right: -4px;
+    border-radius: 0 @panel-border-radius @panel-border-radius 0;
+    background-color: @c-inverse;
+  }
+
+  // bottom
+  &.bar-bottom:before {
+    height: 4px; max-height: 4px;
+    bottom: -4px; left: 1px; right: 1px;
+    border-radius: 0 0 @panel-border-radius @panel-border-radius;
+    background-color: @c-inverse;
+  }
+
+}
+
+// ----- well -----
+.well {}
+
+// ----- icon circle -----
+.icon-circle {
+  width: 4em; height: 4em;
+
+  padding: 1.2em;
+  border-radius: 50%;
+
+  background-color: fadeout(black, 96%);
+  border: solid thin fadeout(black, 94%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  i {
+    font-size: 1.3em;
+  }
+}
+
+
+// random
+
+// this is used in the tabs component for the `advanced search` links
+.tabs-extra-options {
+  flex: 0 1 100%;
+
+  & > .option {
+    font-size: 1.1em;
+    color: cornflowerblue;
+    text-decoration: none;
+    font-weight: @regular;
+    margin: 0 .8em;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+
+    i {
+      margin-right: 5px;
+    }
+
+    &:hover {
+      color: darken(cornflowerblue, 15%);
+    }
+  }
+
+}
+
+.vue-portal-target {
+  width: 100%; height: 100%;
+}
+
+.preview {
+
+  & > .preview-key {
+    color: @grey8;
+
+
+    &:after {
+      content: ": "
+    }
+  }
+
+  & > .preview-value {
+    color: @grey7;
+    font-weight: 100;
+    margin-right: .5rem;
+  }
+
+}

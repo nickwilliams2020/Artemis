@@ -1,0 +1,253 @@
+// -----------  page -----------
+
+.default-page-transition-enter {
+  transform: translateY(-25px);
+  opacity: 0;
+}
+.default-page-transition-enter-active {
+  transition: all .1s @transition-curve-in;
+  // transition: all @transition-speed @transition-curve-in;
+}
+.default-page-transition-enter-to, .default-page-transition-leave {
+  transform: translateY(0);
+  opacity: 1;
+}
+.default-page-transition-leave-active {
+  transition: all .1s @transition-curve-out;
+  // transition: all @transition-speed @transition-curve-out;
+}
+.default-page-transition-leave-to {
+  transform: translateY(25px);
+  opacity: 0;
+}
+
+
+.page-header-icon-enter {
+  transform: rotate(120deg);
+  opacity: 0;
+}
+.page-header-icon-enter-active {
+  transition: all @transition-speed @transition-curve-in;
+}
+.page-header-icon-enter-to {
+  opacity: 1;
+  transform: rotate(0);
+}
+.page-header-icon-leave-active {
+  transition: all @transition-speed @transition-curve-out;
+}
+.page-header-icon-leave-to {
+  transform: rotate(-120deg);
+  opacity: 0;
+}
+
+
+.page-header-enter {
+  transform: translateY(-20px);
+  opacity: 0;
+}
+.page-header-enter-active {
+  transition: all @transition-speed @transition-curve-in;
+}
+.page-header-enter-to {
+  opacity: 1;
+  transform: translateY(0);
+
+}
+.page-header-leave-active {
+  transition: all @transition-speed @transition-curve-out;
+}
+.page-header-leave-to {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+
+.modal-enter {
+  transform: scale(.87);
+  opacity: .5;
+}
+.modal-enter-active {
+  transition: all .2s cubic-bezier(0,.96,.36,.99);
+}
+.modal-enter-to {
+  opacity: 1;
+  transform: scale(1);
+}
+.modal-leave-active {
+  transition: all .2s cubic-bezier(1,.02,.99,.36);
+}
+.modal-leave-to {
+  transform: scale(.8);
+  opacity: 0;
+}
+
+
+
+
+.object-view-enter {
+  transform: translateY(-30%);
+  opacity: .5;
+}
+.object-view-enter-active {
+  transition: all .2s ease-in-out;
+}
+.object-view-enter-to {
+  opacity: 1;
+  transform: translateY(0);
+}
+.object-view-leave-active {
+  transition: all .2s ease-in-out;
+}
+.object-view-leave-to {
+  transform: translateY(-30%);
+  opacity: 0;
+}
+
+
+
+
+.container {
+  width: 100%; height: 100%;
+
+  .portal {
+    width: 100%; height: 100%;
+
+    &.expanded {
+      .r;
+      position: fixed;
+      top: 0; right: 0; bottom: 0; left: 0;
+    }
+
+    .child {
+      width: 100%; height: 100%;
+    }
+  }
+}
+
+
+// ---------- generic -----------
+
+// side in from right
+.slide-in-from-right-enter-active {
+  transition: transform .1s;
+}
+.slide-in-from-right-leave-active {
+  transition: transform .1s;
+}
+.slide-in-from-right-enter, .slide-in-from-right-leave-to {
+  transform: translateX(400px);
+}
+
+// side in from left
+.slide-in-from-left-enter-active {
+  transition: transform .2s;
+
+}
+.slide-in-from-left-leave-active {
+  transition: transform .2s;
+}
+.slide-in-from-left-enter, .slide-in-from-left-leave-to {
+  transform: translateX(-400px);
+  opacity: 0;
+}
+
+
+.fade-leave-active, .fade-enter-active {
+  transition: all .2s ease-in;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+.fade-enter-to {
+  opacity: 1;
+}
+
+
+.slide-down-enter {
+  transform: translateY(-10px);
+  opacity: 0;
+}
+.slide-down-enter-active {
+  transition: all .2s ease-in;
+}
+.slide-down-enter-to, .slide-down-leave {
+  transform: translateY(0);
+  opacity: 1;
+}
+.slide-down-leave-active {
+  transition: all .2s ease-out;
+}
+.slide-down-leave-to {
+  transform: translateY(10px);
+
+  opacity: 0;
+}
+
+
+.expand-enter {
+  // transform: translateY(-10px);
+  transform: scale(1);
+  opacity: 1;
+}
+.expand-enter-active {
+  transition: transform 1s ease-in, opacity 1s ease-out;
+  transform: scale(1);
+
+  & > .child {
+    position: relative!important;
+    width: 100%; height: 100%;
+
+    top: initial; right: initial; bottom: initial; left: initial;
+  }
+
+}
+.expand-enter-to, .expand-leave {
+  transform: scale(1.2);
+  opacity: 0;
+}
+.expand-leave-active {
+  transition: opacity 1s ease-out;
+  // opacity: 0;
+}
+.expand-leave-to {
+  // transform: translateY(10px);
+
+  opacity: 1;
+}
+
+
+// ---------- dashboard enter animation -----------
+.dashboard-list-enter {
+  opacity: 0;
+  transform: translateY(40px) rotateY(45deg);
+}
+.dashboard-list-enter-active {
+  transition: all .65s;
+  .foreach ({
+    &:nth-child(@{value}) {
+      @speed: .1;
+      @delay: @value * @speed;
+
+      transition-delay:  ~'@{delay}s';
+    }
+  }, 12);
+}
+.dashboard-list-enter-to {
+  opacity: 1;
+}
+.dashboard-list-leave {
+  opacity: 0;
+}
+.dashboard-list-leave-active {
+  transition: opacity 0s; // make charts exit instantly
+}
+.dashboard-list-leave-to {
+  opacity: 0;
+}
+.foreach(@body, @i) when (@i>0) {
+  .foreach(@body, @i - 1);
+
+  @value: @i;
+  @body();
+}

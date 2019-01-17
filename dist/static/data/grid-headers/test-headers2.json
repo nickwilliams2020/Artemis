@@ -1,0 +1,42 @@
+[
+  {
+    "field": "first_name",
+    "headerName": "First Name",
+    "show": true,
+    "sortable": true,
+    "source": true,
+    "width": 200
+  },
+  {
+    "field": "last_name",
+    "headerName": "Last Name",
+    "show": true,
+    "sortable": true,
+    "source": true,
+    "width": 200
+  },
+  {
+    "field": "email",
+    "headerName": "Email Address",
+    "show": true,
+    "sortable": true,
+    "source": "raw",
+    "width": 250
+  },
+  {
+    "field": "phone",
+    "headerName": "Phone",
+    "show": true,
+    "sortable": true,
+    "source": "raw",
+    "width": 120
+  },
+  {
+    "field": "status",
+    "headerName": "Status",
+    "show": true,
+    "sortable": true,
+    "source": true,
+    "width": 120
+  }
+]

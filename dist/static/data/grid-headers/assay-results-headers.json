@@ -1,0 +1,56 @@
+[
+  {
+    "field": "biomarker",
+    "headerName": "Biomarker",
+    "show": true,
+    "sortable": true,
+    "source": true,
+    "width": 200,
+    "filters": ["titleCase"]
+  },
+  {
+    "field": "result",
+    "headerName": "Result",
+    "show": true,
+    "sortable": true,
+    "source": true,
+    "width": 200,
+    "filters": ["titleCase"]
+  },
+  {
+    "field": "type",
+    "headerName": "Type",
+    "show": true,
+    "sortable": true,
+    "source": true,
+    "width": 200,
+    "filters": ["titleCase"]
+  },
+  {
+    "field": "reportedDate",
+    "headerName": "Reported Date",
+    "show": true,
+    "sortable": true,
+    "source": true,
+    "width": 200,
+    "filters": ["titleCase"]
+  },
+  {
+    "field": "orderedDate",
+    "headerName": "Ordered Date",
+    "show": true,
+    "sortable": true,
+    "source": true,
+    "width": 200,
+    "filters": ["titleCase"]
+  },
+  {
+    "field": "type",
+    "headerName": "Type",
+    "show": true,
+    "sortable": true,
+    "source": true,
+    "width": 200,
+    "filters": ["titleCase"]
+  }
+]

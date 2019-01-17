@@ -1,0 +1,52 @@
+[
+  {
+    "id": "test-pie-chart",
+    "display": [
+      {
+        "order": 5,
+        "row": 6,
+        "col": 4
+      },
+      {
+        "order": 1,
+        "row": 1,
+        "col": 4
+      },
+      {
+        "order": 1,
+        "row": 1,
+        "col": 12
+      }
+    ],
+
+    "reportApiConfig": {
+      "headers": {},
+      "endpoint": "analytic/trials",
+      "params": {
+        "chart": "phase"
+      }
+    },
+    "reportType": "chart",
+    "reportProps": {
+
+      "id": "phase",
+      "chartType": "pie",
+      "chartTitle": "Test Chart",
+      "chartProps": {
+
+      },
+
+      "title": "Test Pie",
+      "countType": "items",
+      "theme": "cyan",
+      "settings": [],
+      "showTotal": true,
+      "hasHeader": true,
+      "hasActionBar": true,
+      "canExpand": true,
+      "hasLegend": true,
+      "canExport": true,
+      "canScreenshot": true
+    }
+  }
+]

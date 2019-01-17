@@ -1,0 +1,166 @@
+[
+  {
+    "field": "patientSequenceNumber",
+    "headerName": "Patient Sequence Number",
+    "show": true,
+    "sortable": true,
+    "source": true,
+    "width": 200,
+    "link": {
+      "to": "patient"
+    }
+  },
+  {
+    "field": "gender",
+    "headerName": "Gender",
+    "show": true,
+    "sortable": true,
+    "source": true,
+    "width": 200,
+    "filters": ["titleCase"]
+  },
+  {
+    "field": "ethnicity",
+    "headerName": "Ethnicity",
+    "show": true,
+    "sortable": true,
+    "source": true,
+    "width": 200,
+    "filters": ["replaceUnderscores", "titleCase"]
+  },
+  {
+    "field": "diseases",
+    "headerName": "Diseases",
+    "show": true,
+    "sortable": true,
+    "sortKey": "diseases.ctepCategory",
+    "source": true,
+    "width": 200,
+    "filters": ["disease"]
+  },
+  {
+    "field": "biopsies",
+    "headerName": "Single Nucleotide Variants",
+    "show": true,
+    "sortable": true,
+    "sortKey": "biopsies.nextGenerationSequences.variantReport.singleNucleotideVariants.gene",
+    "source": true,
+    "width": 200,
+    "filters": ["SNV"]
+  },
+  {
+    "field": "biopsies",
+    "headerName": "SNV Identifiers",
+    "show": true,
+    "sortable": true,
+    "sortKey": "biopsies.nextGenerationSequences.variantReport.singleNucleotideVariants.identifier",
+    "source": true,
+    "width": 200,
+    "filters": ["SNVi"]
+  },
+  {
+    "field": "biopsies",
+    "headerName": "Copy Number Variants",
+    "show": true,
+    "sortable": false,
+    "sortKey": "biopsies.nextGenerationSequences.variantReport.copyNumberVariants.gene",
+    "source": true,
+    "width": 200,
+    "filters": ["CNV"]
+  },
+  {
+    "field": "biopsies",
+    "headerName": "CNV Identifiers",
+    "show": true,
+    "sortable": false,
+    "sortKey": "biopsies.nextGenerationSequences.variantReport.copyNumberVariants.identifier",
+    "source": true,
+    "width": 200,
+    "filters": ["CNVi"]
+  },
+  {
+    "field": "biopsies",
+    "headerName": "Gene Fusions",
+    "show": true,
+    "sortable": true,
+    "sortKey": "biopsies.nextGenerationSequences.variantReport.geneFusions.gene",
+    "source": true,
+    "width": 200,
+    "filters": ["GF"]
+  },
+  {
+    "field": "biopsies",
+    "headerName": "GF Identifiers",
+    "show": true,
+    "sortable": true,
+    "sortKey": "biopsies.nextGenerationSequences.variantReport.geneFusions.identifier",
+    "source": true,
+    "width": 200,
+    "filters": ["GFi"]
+  },
+  {
+    "field": "biopsies",
+    "headerName": "Indels",
+    "show": true,
+    "sortable": true,
+    "sortKey": "biopsies.nextGenerationSequences.variantReport.indels.gene",
+    "source": true,
+    "width": 200,
+    "filters": ["indels"]
+  },
+  {
+    "field": "biopsies",
+    "headerName": "Indel Identifiers",
+    "show": true,
+    "sortable": true,
+    "sortKey": "biopsies.nextGenerationSequences.variantReport.indels.identifier",
+    "source": true,
+    "width": 200,
+    "filters": ["indelsi"]
+  },
+  {
+    "field": "biopsies",
+    "headerName": "Unified Gene Fusions",
+    "show": true,
+    "sortable": true,
+    "sortKey": "biopsies.nextGenerationSequences.variantReport.unifiedGeneFusions.driverGene",
+    "source": true,
+    "width": 200,
+    "filters": ["UGF"]
+  },
+  {
+    "field": "biopsies",
+    "headerName": "UGF Identifiers",
+    "show": true,
+    "sortable": true,
+    "sortKey": "biopsies.nextGenerationSequences.variantReport.unifiedGeneFusions.identifier",
+    "source": true,
+    "width": 200,
+    "filters": ["UGFi"]
+  },
+  {
+    "field": "currentPatientStatus",
+    "headerName": "Patient Status",
+    "show": true,
+    "sortable": true,
+    "source": true,
+    "width": 200
+  },
+  {
+    "field": "patientType",
+    "headerName": "Patient Type",
+    "show": true,
+    "sortable": true,
+    "source": true,
+    "width": 200
+  },
+  {
+    "field": "registrationDate",
+    "headerName": "Registration Date",
+    "show": true,
+    "sortable": true,
+    "source": true,
+    "width": 200,
+    "filters": ["date"]
+  }
+]

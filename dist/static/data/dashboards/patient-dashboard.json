@@ -1,0 +1,74 @@
+[
+  {
+    "id": "circos",
+    "display": [
+      {
+        "order": 0,
+        "row": 15,
+        "col": 15
+      },
+      {
+        "order": 0,
+        "row": 16,
+        "col": 15
+      }
+    ],
+    "reportApiConfig": {
+      "endpoint": "search/analytics",
+      "params": {
+        "aggregate_over": "diseases.ctepCategory.keyword",
+        "chart_type": "circular-graph"
+      }
+    },
+    "reportType": "chart-report",
+    "reportProps": {
+      "id": "gender",
+      "chartType": "circular",
+      "chartTitle": "Variant Co-Occurence",
+      "countType": "node(s)",
+      "theme": "cyan",
+      "chartProps": {
+        "labelFilters": [
+          "replaceUnderscores",
+          "titleCase"
+        ]
+      }
+    }
+  },
+  {
+    "id": "pca",
+    "display": [
+      {
+        "order": 1,
+        "row": 12,
+        "col": 15
+      },
+      {
+        "order": 1,
+        "row": 12,
+        "col": 15
+      }
+    ],
+    "reportApiConfig": {
+      "endpoint": "search/analytics",
+      "params": {
+        "fields":"patient_sequence_number,gender,ethnicity,gene_fusion,single_nucleotide_variant,copy_number_variant,indel,unified_gene_fusion,disease",
+        "chart_type": "pca"
+      }
+    },
+    "reportType": "chart-report",
+    "reportProps": {
+      "id": "gender",
+      "chartType": "scatter",
+      "chartTitle": "Principal Component Analysis of Patient Selection Colored by Gender",
+      "countType": "patient(s)",
+      "theme": "cyan",
+      "chartProps": {
+        "labelFilters": [
+          "replaceUnderscores",
+          "titleCase"
+        ]
+      }
+    }
+  }
+]

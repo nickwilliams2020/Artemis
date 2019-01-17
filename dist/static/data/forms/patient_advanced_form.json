@@ -1,0 +1,86 @@
+[
+  {
+    "type": "text",
+    "id": "keyword",
+    "label": "Keyword"
+  },
+  {
+    "type": "text",
+    "id": "gene",
+    "label": "Gene"
+  },
+   {
+    "type": "text",
+    "id": "arm",
+    "label": "Treatment Arm",
+    "placeholder": "Optional arm parameter"
+  },
+     {
+    "type": "text",
+    "id": "single_nucleotide_variant",
+    "label": "Single Nucleotide Variant",
+    "placeholder": "Optional SNV parameter"
+  },
+     {
+    "type": "text",
+    "id": "copy_number_variant",
+    "label": "Copy Number Variants",
+    "placeholder": "Optional CNV parameter"
+  },
+     {
+    "type": "text",
+    "id": "gene_fusion",
+    "label": "Gene Fusion",
+    "placeholder": "Optional gene fusion parameter"
+  },
+     {
+    "type": "text",
+    "id": "patient_sequence_number",
+    "label": "Patient Sequence Number",
+    "placeholder": "Optional patient sequence number parameter"
+  },
+  {
+    "type": "select",
+    "id": "gender",
+    "label": "Gender",
+    "placeholder": "Optional gender parameter",
+    "hasLabel": true,
+    "multiselect": false,
+    "optionSource": "props",
+    "options": [
+      {"label": "Unknown", "value": "UNKNOWN"},
+      {"label": "Male", "value": "MALE"},
+      {"label": "Female", "value": "FEMALE"}
+    ]
+  },
+   {
+    "type": "text",
+    "id": "ethnicity",
+    "label": "Ethnicity",
+    "placeholder": "Optional ethnicity parameter"
+  },
+     {
+    "type": "text",
+    "id": "disease",
+    "label": "Disease",
+    "placeholder": "Optional disease parameter"
+  },
+     {
+    "type": "text",
+    "id": "biomarker",
+    "label": "Biomarker",
+    "placeholder": "Optional biomarker parameter"
+  },
+  {
+    "type": "text",
+    "id": "cosmic_id",
+    "label": "Cosmic ID",
+    "placeholder": "Optional cosmic id parameter"
+  },
+  {
+    "type": "text",
+    "id": "",
+    "label": "Custom",
+    "placeholder": "Optional custom parameter (Ex: biopsies.biopsySequenceNumber: bsn-1006"
+  }
+]

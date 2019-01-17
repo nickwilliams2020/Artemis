@@ -1,0 +1,10 @@
+flask
+flask-wtf
+flask-migrate
+flask-sqlalchemy
+flask-login
+flask-cors
+werkzeug
+python-dotenv
+PyJWT
+requests

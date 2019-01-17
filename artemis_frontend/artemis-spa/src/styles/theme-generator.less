@@ -1,0 +1,52 @@
+/*
+  loop through each color in the theme and create classes for each style block
+  define the theme by name, color, shade %, lightness %
+  to use this function, you must give it it's own scope:
+
+  @scope: {
+    .generateThemeClasses({
+
+      // some css
+      // has access to @name, @color, @color-dark, and @color-light
+
+    });
+  }
+  @scope();
+
+*/
+
+@import '../assets/tokens/tokens.less';
+
+@theme-array:
+  red,
+  green,
+  blue,
+  lime,
+  cyan,
+  purple,
+  yellow,
+  inverse,
+  light,
+
+  danger,
+  warning,
+  success,
+  info;
+
+.generateThemeClasses(@body, @i: length(@theme-array)) when (@i > 0)
+{
+
+  @name: extract(@theme-array, @i);
+
+  @string-name: 'c-@{name}';
+  @string-name-light: 'c-@{name}-light';
+  @string-name-dark: 'c-@{name}-dark';
+
+  @color: @@string-name;
+  @color-dark: @@string-name-light;
+  @color-light: @@string-name-dark;
+
+  @body(); // call passed in style block
+
+  .generateThemeClasses(@body, @i - 1); // loop over themes
+}

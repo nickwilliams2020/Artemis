@@ -1,0 +1,67 @@
+/*
+  this file sets up the adjustable properties of the theme
+*/
+@import (reference) '../assets/tokens/tokens.less';
+
+// ------ page settings ------
+
+// global
+@root-size: 14px;
+
+// font
+@font-family: 'Nunito', sans-serif;
+@font-size: 1rem;
+@font-size-sm: .8rem;
+@font-size-lg: 1.1rem;
+@thin: 200;
+@regular: 400;
+@bold: 700;
+
+// nav
+@nav-bg-color: @c-inverse;
+@nav-logo-bg-color: lighten(@nav-bg-color, 5%);
+@nav-width: 85px;
+
+
+// page
+@page-min-height: calc(~'100vh - 50px'); // size of screen minus footer height
+@page-min-width: 100vw;
+@page-bg-color: white;
+@page-header-color: @grey1;
+@page-padding: 2.5rem;
+
+// Buttons
+@btn-focus-color: #32a1ce;
+@btn-font-weight: 600;
+@btn-border-radius: 3px;
+@btn-border-weight: 1px;
+
+
+// panel
+@panel-padding: 1rem;
+@panel-border-radius: 2px;
+@panel-shadow: 0 0 2px rgba(0,0,0,0.12), 0 2px 2px rgba(0,0,0,0.24);
+
+
+// inputs
+@input-font-size: @font-size;
+@input-font-size: 1rem;
+@input-padding: .5em .7em;
+
+@input-bg-color: transparent;
+@input-border: solid 1px @grey4;
+@input-border-radius: 2px;
+
+@input-focus-bg-color: white;
+@input-focus-border: solid 1px @c-blue;
+@input-focus-shadow: inset 0 1px 3px fadeout(black, 90%), inset 0 1px 4px fadeout(black, 85%);
+
+@input-error-color: @c-danger;
+@input-error-bg-color: lighten(@input-error-color, 45%);
+@input-error-border-color: @input-error-color;
+@input-error-border: solid 1px @input-error-color;
+
+// Transition
+@transition-speed: .2s;
+@transition-curve-in: cubic-bezier(.02,.66,.37,.99);
+@transition-curve-out: cubic-bezier(.97,.04,1,.51);
