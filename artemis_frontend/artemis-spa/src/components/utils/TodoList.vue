@@ -10,11 +10,12 @@
     <section class="section">
         <div class="todo-container container">
             <header class="current-date">
+                 <div class="today"><span>{{ date.dayName }}</span></div>
                 <div class="date">
                     <span class="day-number">{{ date.dayNum }}</span>
                     <div class="month-year-wrapper">
-                    <span class="month">{{ date.month }}</span>
-                    <span class="year">{{ date.year }}</span>
+                        <span class="month">{{ date.month }}</span>
+                        <span class="year">{{ date.year }}</span>
                     </div>
                 </div>
                 <div class="today"><span>{{ date.dayName }}</span></div>
@@ -153,10 +154,10 @@ export default {
 
     .todo-container {
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.18);
-        height: 24em; /*490px*/
+        height: 36em; 
         padding: 2em;
         position: relative;
-        width: 380px;
+        width: 40em;
     }
 
     ul {
@@ -201,7 +202,7 @@ export default {
     }
 
     header .today {
-        font-weight: 600;
+        font-weight: 100;
     }
 
     /*TODO BODY*/
@@ -255,7 +256,7 @@ export default {
         width: 90px;
         position: absolute;
         bottom: -45px;
-        left: calc(190px - 45px);
+        left: calc(300px - 45px);
         outline: none;
         transition: 200ms ease-in-out;
     }
