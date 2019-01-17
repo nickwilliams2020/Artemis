@@ -10,8 +10,8 @@
 
     <section class="section">
       <div class="container">
-
-         <div class="postBody">
+        <!-- TODO: Build this lol -->
+         <!-- <div class="postBody">
                 <div class="avatarContainer">
                     <img :src="post.user.avatar" class="avatar" width="70" height="70">
                     <div class="postHead">
@@ -25,7 +25,9 @@
                 <div class="postContent">
                     {{ post.body }}
                 </div>
-            </div>
+            </div> -->
+            
+
       </div>
     </section>
   </div>

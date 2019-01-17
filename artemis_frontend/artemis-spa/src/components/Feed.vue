@@ -1,23 +1,46 @@
-``<template id="feed">
-    <div class="container has-text-centered">
+<template id="feed">
+    <div class="container has-text-centered" >
+         <vs-alert title="No Posts To Display" :active="posts.length === 0" color="dark">
+            
+            </vs-alert>
+
         <div v-for="post in posts" v-bind:key="post.id" class="post">
 
-            <div class="postBody">
+            <!-- <div class="postBody">
                 <div class="avatarContainer">
-                    <img :src="post.user.avatar" class="avatar" width="70" height="70">
-                    <div class="postHead">
-                    <span class="author">
-                        {{ post.user.name }}
-                    </span>
-                    {{ getTimeDiff(post.timestamp) }}
-                    </div>
+                    
                 </div>
                 
                 <div class="postContent">
                     {{ post.body }}
                 </div>
-            </div>
-            <br>
+            </div> -->
+            <vs-row vs-justify="center">
+              <vs-col type="flex" vs-justify="center" vs-align="center" vs-w="6">
+                <vs-card actionable class="cardx">
+                  <div slot="header">
+
+                        <vs-avatar size="large" :src="post.user.avatar" class="avatar" />
+                        <div class="postHead">
+                            <span class="author">
+                                {{ post.user.name }}
+                            </span>
+                            {{ getTimeDiff(post.timestamp) }}
+                        </div>
+
+                  </div>
+                  <div class="postContent">
+                    <span >{{post.body}}</span>
+                  </div>
+                  <div slot="footer">
+                    <vs-row vs-justify="flex-end">
+                      <vs-button color="success" @click="like" icon="more_horiz"/>
+                      <vs-button color="danger" @click="deletePost" :id="post.id" icon="delete"/>
+                    </vs-row>
+                  </div>
+                </vs-card>
+              </vs-col>
+            </vs-row>
         </div>
     </div>
 </template>
@@ -56,6 +79,14 @@
                 }
                  
                 return elapsedTime
+            },
+
+            deletePost(e) {
+                // TODO: add functionality to handle deleting post from server
+            },
+
+            like(e) {
+                // TODO: add functionality to handle post metadata here and in backened database
             }
         }
     }
