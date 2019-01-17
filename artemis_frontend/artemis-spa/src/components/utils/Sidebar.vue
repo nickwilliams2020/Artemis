@@ -1,6 +1,6 @@
 <template>
     <div>
-        <vs-sidebar :reduce="reduce" :parent="parent" :hidden-background="true" default-index="0"  color="success" class="sidebarx" spacer v-model="show">
+        <vs-sidebar :reduce="reduce" :reduce-not-hover-expand="true" reduce-not-rebound :parent="parent" :hidden-background="true" default-index="0"  color="success" class="sidebarx" spacer v-model="show">
 
         <div class="header-sidebar" slot="header">
             <vs-avatar  size="70px" :src="user.avatar" />
@@ -9,9 +9,9 @@
             <vs-sidebar-item index="1" icon="menu" @click="reduce=!reduce">
                 Toggle Sidebar
             </vs-sidebar-item>
-            <vs-divider icon="public" position="left">
+            <!-- <vs-divider icon="public" position="left">
                 User
-            </vs-divider>
+            </vs-divider> -->
             <!-- <vs-sidebar-item index="5" icon="verified_user">
             Configurations
             </vs-sidebar-item> 

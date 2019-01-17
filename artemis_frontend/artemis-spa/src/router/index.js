@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from '@/components/Home'
 import Post from '@/components/Post'
 import NewPost from '@/components/NewPost'
+import Todo from '@/components/utils/TodoList'
 import Login from '@/components/Login'
 import store from '@/store'
 
@@ -31,6 +32,18 @@ export default new Router({
       path: '/posts',
       name: 'NewPost',
       component: NewPost,
+      beforeEnter (to, from, next) {
+        if (!store.getters['auth/isAuthenticated']) {
+          next('/login')
+        } else {
+          next()
+        }
+      }
+    },
+    {
+      path: '/todo',
+      name: 'Todo',
+      component: Todo,
       beforeEnter (to, from, next) {
         if (!store.getters['auth/isAuthenticated']) {
           next('/login')

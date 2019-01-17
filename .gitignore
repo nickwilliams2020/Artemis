@@ -1,6 +1,7 @@
 */.*
 *.db
 *.pyc
-*/__pycache__
 migrations/
 lib/
+venv/
+*.log
