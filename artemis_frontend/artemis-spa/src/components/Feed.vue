@@ -1,20 +1,10 @@
 <template id="feed">
     <div class="container has-text-centered" >
-         <vs-alert title="No Posts To Display" :active="posts.length === 0" color="dark">
-            
-            </vs-alert>
+        <vs-alert title="No Posts To Display" :active="posts.length === 0" color="dark">
+            You can add a new post by clicking the "Create Post" button on the sidebar!    
+        </vs-alert>
 
         <div v-for="post in posts" v-bind:key="post.id" class="post">
-
-            <!-- <div class="postBody">
-                <div class="avatarContainer">
-                    
-                </div>
-                
-                <div class="postContent">
-                    {{ post.body }}
-                </div>
-            </div> -->
             <vs-row vs-justify="center">
               <vs-col type="flex" vs-justify="center" vs-align="center" vs-w="6">
                 <vs-card actionable class="cardx">
@@ -34,8 +24,8 @@
                   </div>
                   <div slot="footer">
                     <vs-row vs-justify="flex-end">
-                      <vs-button color="success" @click="like" icon="more_horiz"/>
-                      <vs-button color="danger" @click="deletePost" :id="post.id" icon="delete"/>
+                      <vs-button color="success" @click="like(post.user.name)" icon="thumb_up_alt"/>
+                      <vs-button color="danger" @click="deletePost" icon="delete"/>
                     </vs-row>
                   </div>
                 </vs-card>
@@ -83,10 +73,22 @@
 
             deletePost(e) {
                 // TODO: add functionality to handle deleting post from server
+                this.$vs.notify({
+                    color:'danger',
+                    title:'Post temporarily removed. Refresh page to get it back!',
+                    text:''
+                })
+                this.posts.shift()
             },
 
-            like(e) {
-                // TODO: add functionality to handle post metadata here and in backened database
+            like(name) {
+                // TODO: add functionality to handle post metadata here and in backend database
+                let message = name + " says thank you!"
+                this.$vs.notify({
+                    color:'success',
+                    title:'Liked!',
+                    text: message
+                })
             }
         }
     }
