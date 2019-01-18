@@ -13,8 +13,9 @@ export default {
         posts: [],
         currentPost: {},
         user: {},
-        access_token: null
-        // jwt: {'token': localStorage.getItem('token')}
+        access_token: null,
+        tasks: [],
+        completed_tasks: 0
     },
 
     getters: {
@@ -22,6 +23,9 @@ export default {
         getAccessToken: state => state.access_token,
         getUserName: state => state.user.name,
         getUser: state => state.user,
+        getTasks: state => state.tasks,
+        numTasks: state => state.tasks.length,
+        numTasksCompleted: state => state.completed_tasks,
         isAuthenticated: state => isValidJwt(state.access_token)
     },
 
@@ -42,7 +46,18 @@ export default {
         clearAuth (state) {
             state.user = null
             state.access_token = null
-        }
+        },
+        addTask(state, taskDescription) {
+            if(taskDescription) {
+                var newTask = {
+                    id: (state.tasks.length + 1),
+                    description: taskDescription,
+                    completed: false
+                }
+                state.tasks.unshift(newTask)
+            }
+        },
+        
     },
 
     actions: { // this.$store.dispatch('<function name>')
@@ -68,6 +83,24 @@ export default {
         logout (context) {
             context.commit('clearAuth')
             router.push('/login')
+        },
+        addTask(context, taskDescription) {
+            context.commit('addTask', taskDescription)
+        },
+        completeTask({commit, state}, id) {
+            let num_completed = state.completed_tasks;
+            let total_tasks = state.tasks.length;
+
+            if (num_completed < total_tasks){
+                var task = state.tasks.find((t) => {
+                    return t.id == id
+                })
+                if (task) {
+                    task['completed'] = true;
+
+                    state.completed_tasks++
+                }
+            }
         },
         submitNewPost (context, post) {
             return postNewPost(post, context.state.access_token)

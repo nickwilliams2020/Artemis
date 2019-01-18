@@ -25,11 +25,11 @@
             <vs-progress :height="12" :percent="percent" color="success">success</vs-progress>
 
             <ul class="tasks-container">
-                <li class="task-container" v-for="(task, idx) in tasks" :key="idx" :class="{ checked: !task.state }">
+                <li class="task-container" v-for="(task, idx) in tasks" :key="idx" :class="{ checked: task.completed }">
                     <!-- TODO: Use the vs-collapse component to make each list elm more verbose -->
-                    <p class="task">{{ task.name }}</p>
+                    <p class="task">{{ task.description }}</p>
                     <!-- <vs-button color="success" type="border" @click="checkTask">Complete</vs-button> -->
-                    <vs-radio :v-model="task" color="success" @click="checkTask"/>
+                    <vs-radio :v-model="task" :disabled="task.completed" color="success" :value="task.id" @click="checkTask"/>
                 </li>
             </ul>
             </main>
@@ -58,15 +58,15 @@
 
 <script>
 import moment from 'moment'
+import { mapState } from 'vuex'
+
 // TODO: Have this component retrieve data from server
 export default {
     name: 'Todo',
     data() {
         return {
             activePrompt: false,
-            tasks: [],
             task: '',
-            num_tasks_completed:0,
             percent: 0,
             date: {
                 dayNum: '',
@@ -111,14 +111,8 @@ export default {
             this.date.dayName = dayName
         },
         addTask(inputTask) {
-            if(inputTask) {
-                var objTask = {
-                    name: inputTask,
-                    state: true
-                }
-                this.tasks.unshift(objTask)
-                this.calcPercentComplete()
-            }
+            this.$store.dispatch('auth/addTask', inputTask)
+            this.calcPercentComplete()
         },
         checkTask(e){
             const taskButton = e.target
@@ -129,16 +123,24 @@ export default {
                 taskElement.classList.toggle('checked')
                 taskButton.disabled = true;
 
-                this.num_tasks_completed++
+                this.$store.dispatch('auth/completeTask', taskButton.value)
                 this.calcPercentComplete()
             }
         },
         calcPercentComplete() {
-            this.percent = (this.num_tasks_completed/this.tasks.length)*100
+            let num_tasks = this.$store.getters['auth/numTasks']
+            let completed = this.$store.getters['auth/numTasksCompleted']
+
+            this.percent = (completed/num_tasks)*100
         }
     },
-    computed: {
+    computed: mapState({
+        tasks: state => state.auth.tasks
+    }),
+    beforeMount() {
+        this.calcPercentComplete()
     }
+
 }
 </script>
 
