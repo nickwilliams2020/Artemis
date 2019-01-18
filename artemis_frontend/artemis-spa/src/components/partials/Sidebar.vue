@@ -1,6 +1,15 @@
 <template>
     <div>
-        <vs-sidebar :reduce="reduce" :reduce-not-hover-expand="true" reduce-not-rebound :parent="parent" :hidden-background="true" default-index="0"  color="success" class="sidebarx" spacer v-model="show">
+        <vs-sidebar 
+        :reduce="reduce" 
+        reduce-not-rebound
+        :parent="parent" 
+        :hidden-background="true" 
+        default-index="0"  
+        color="success" 
+        class="sidebarx" 
+        spacer 
+        v-model="show">
 
         <div class="header-sidebar" slot="header">
             <vs-avatar  size="70px" :src="user.avatar" />

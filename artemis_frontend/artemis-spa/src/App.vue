@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import Sidebar from '@/components/utils/Sidebar'
+import Sidebar from '@/components/partials/Sidebar'
 import { mapState } from 'vuex'
 
 export default {
